@@ -37,6 +37,7 @@ app.use("/api", brandRoutes);
 app.use("/api", phoneRoutes);
 app.use("/api", contactRoutes);
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server is running on port ${process.env.PORT}`);
+const PORT = 9002 || process.env.PORT
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
